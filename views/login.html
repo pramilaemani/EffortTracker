@@ -1,0 +1,36 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Honda Effort Tracker</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+    <h1>Honda Effort Tracker</h1>
+</head>
+<body background="/images/login.jpg">
+<div class="form-container" style="margin: 180px; margin-left: 800px;">
+    <h2>Login</h2>
+    <% if(locals.error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    <% if(locals.success) { %>
+        <div class="alert alert-success"><%= success %></div>
+    <% } %>
+    <form method="post">
+        <div class="form-group">
+            <label style="color: black;" for="username">Username</label>
+            <input type="text" name="username" id="username" value="<%= locals.username || '' %>" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label style="color: black;" for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a href="/register" class="btn btn-link">Register</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

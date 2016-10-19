@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Honda Effort Tracker</title>
+  <link rel="stylesheet" type="text/css" href="/css/app.css">
+</head>
+<body background="/images/app.jpg">
+
+  <div id="menu">  
+  <ul class="menu">
+    <li><a href="home">Home</a></li>
+    <li><a href="account">Account</a></li>
+    <li><a href="task">Task</a></li>
+    <li><a href="reports">Reports</a></li>
+    <li class="logout"><a href="/logout" target="_self">Logout</a></li>
+  </ul>
+  <div ng-view="ng-view"></div>
+  <!-- <div id="footer">Honda Effort Tracker: v<span app-version="app-version"></span></div> -->
+</div>
+    <script src="js/lib/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+</body>
+</html>
+  
+
+ 
+
